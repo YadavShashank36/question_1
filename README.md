@@ -1,4 +1,13 @@
 # question_1( Building Three API Endpoints with Database Interaction)
+
+Technologies Used
+Node.js: JavaScript runtime environment
+Express: Web framework for Node.js
+MongoDB: NoSQL database
+Mongoose: MongoDB object modeling for Node.js
+
+Installation and running of code steps are:-
+
 1) open terminal npm init
 2) install npm packages mongoose, express(npm i express mongoose body-parser)
 3) install nodemon to avoid restating server whenver changes are made
@@ -32,5 +41,7 @@ const BookSchema = new Schema({
 		type: String,
 	},
 });
+
+
 
 
