@@ -42,6 +42,10 @@ const BookSchema = new Schema({
 	},
 });
 
+server wil run on :-
+1)http://localhost:3000/api/books   to get all books
+2)http://localhost:3000/api/books/{id}  to update a book
+3)http://localhost:3000/api/books  to insert a book.
 
 
 
