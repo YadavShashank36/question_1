@@ -31,16 +31,16 @@ const seedDatabase = async () => {
   }
 };
 
-const connectToMongo= ()=>{
-    mongoose.connect(mongoURI).then(
-        ()=>{
-             await seedDatabase();
-            console.log("Connected....")
-        }
-    ).catch(
-        (err)=>{ 
-            console.log(err);
-        }
-    )
+const connectToMongo= async ()=>{
+    try {
+    await mongoose.connect(mongoURI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log('Connected to MongoDB');
+    await seedDatabase();
+  } catch (err) {
+    console.error('Error connecting to MongoDB:', err);
+  }
 }
 module.exports= connectToMongo;
