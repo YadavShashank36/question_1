@@ -32,7 +32,7 @@ const seedDatabase = async () => {
 };
 
 const connectToMongo= async ()=>{
-    try {
+   try {
     await mongoose.connect(mongoURI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
